@@ -239,7 +239,7 @@ div.section h1
   vertical-align:      top;
   word-wrap:           break-word;
   overflow:            hidden;
-  white-space:         pre-wrap;
+  /*white-space:         pre-wrap;*/
 }
 
 #content .class, #content .interface
@@ -272,7 +272,7 @@ div.section h1
   background-color:   #f0f0f0;
   -moz-border-radius: 5px;
   border-radius:      5px;
-  text-align:         center;
+  text-align:         left;
   margin-top:         -5px;
   padding:            3px;
 }

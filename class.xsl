@@ -66,7 +66,21 @@
       <xsl:for-each select="method">
         <xsl:sort select="name" />
         <tr>
-          <td><a href="#{../name}::{name}()"><xsl:value-of select="name" /></a></td>
+          <td>
+            <img src="./images/icons/method.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            <xsl:if test="@visibility='private'">
+              <img src="./images/icons/constant.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            </xsl:if>
+            <xsl:if test="@visibility='protected'">
+              <img src="./images/icons/constant.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            </xsl:if>
+            <xsl:if test="@visibility='public'">
+              <!--img src="./images/icons/visibility_public.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" /-->
+              <span style="width: 16px; height: 16px; margin: 0 5px 0 0; display: inline-block;"></span>
+            </xsl:if>
+
+            <a href="#{../name}::{name}()"><xsl:value-of select="name" /></a>
+          </td>
           <td>
             <xsl:if test="not(docblock/tag[@name='return']/@type)">n/a</xsl:if>
               <xsl:if test="docblock/tag[@name='return']/@type">
@@ -97,7 +111,23 @@
         <xsl:for-each select="property">
           <xsl:sort select="name" />
           <tr>
-          <td><a href="#{../name}::{name}"><xsl:value-of select="name" /></a></td>
+          <td style="padding-bottom: 2px;">
+            <img src="./images/icons/property.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            <xsl:if test="@visibility='private'">
+              <img src="./images/icons/constant.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            </xsl:if>
+            <xsl:if test="@visibility='protected'">
+              <img src="./images/icons/constant.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" />
+            </xsl:if>
+            <xsl:if test="@visibility='public'">
+              <!--img src="./images/icons/visibility_public.png" style="width: 16px; height: 16px; margin: 0 5px 0 0;" /-->
+              <span style="width: 16px; height: 16px; margin: 0 5px 0 0; display: inline-block;"></span>
+            </xsl:if>
+
+           <!--xsl:value-of select="@visibility" />&#160;-->
+
+            <a href="#{../name}::{name}"><xsl:value-of select="name" /></a>
+          </td>
           <td>
               <xsl:value-of select="docblock/tag[@name='var']/@type" />&#160;
           </td>
