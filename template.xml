@@ -4,32 +4,32 @@
     <transformation query="copy" writer="FileIo" source="ajax_search.php" artifact="ajax_search.php"/>
     <transformation query="copy" writer="FileIo" source="js" artifact="js"/>
     <transformation query="copy" writer="FileIo" source="images" artifact="images"/>
-    <transformation query="copy" writer="FileIo" source="themes/bms/css" artifact="css"/>
-    <transformation query="copy" writer="FileIo" source="themes/bms/images" artifact="images"/>
+    <transformation query="copy" writer="FileIo" source="themes/clean-docblox-theme/css" artifact="css"/>
+    <transformation query="copy" writer="FileIo" source="themes/clean-docblox-theme/images" artifact="images"/>
     <transformation query="" writer="Search" source="" artifact="."/>
-    <transformation query="" writer="xsl" source="themes/bms/preprocess/object-index.xsl" artifact="$object-index" />
-    <transformation query="" writer="xsl" source="themes/bms/index.xsl" artifact="index.html">
+    <transformation query="" writer="xsl" source="themes/clean-docblox-theme/preprocess/object-index.xsl" artifact="$object-index" />
+    <transformation query="" writer="xsl" source="themes/clean-docblox-theme/index.xsl" artifact="index.html">
       <parameters>
         <variables><title>Class Diagram</title></variables>
         <search>xmljs</search>
       </parameters>
     </transformation>
-    <transformation query="" writer="xsl" source="themes/bms/classgraph.xsl" artifact="graph.html">
+    <transformation query="" writer="xsl" source="themes/clean-docblox-theme/classgraph.xsl" artifact="graph.html">
       <parameters><variables><title>DocBlox</title></variables>
         <search>xmljs</search>
       </parameters>
     </transformation>
-    <transformation query="/project/file/@path" writer="xsl" source="themes/bms/file.xsl" artifact="{$path}">
+    <transformation query="/project/file/@path" writer="xsl" source="themes/clean-docblox-theme/file.xsl" artifact="{$path}">
       <parameters><variables><title>File</title></variables>
         <search>xmljs</search>
       </parameters>
     </transformation>
-    <transformation query="" writer="xsl" source="themes/bms/markers.xsl" artifact="markers.html">
+    <transformation query="" writer="xsl" source="themes/clean-docblox-theme/markers.xsl" artifact="markers.html">
       <parameters><variables><title>Markers</title></variables>
         <search>xmljs</search>
       </parameters>
     </transformation>
-    <transformation query="" writer="xsl" source="themes/bms/parse_markers.xsl" artifact="parse_markers.html">
+    <transformation query="" writer="xsl" source="themes/clean-docblox-theme/parse_markers.xsl" artifact="parse_markers.html">
       <parameters><variables><title>Errors</title></variables>
         <search>xmljs</search>
       </parameters>
