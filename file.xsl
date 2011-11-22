@@ -15,14 +15,14 @@
   <xsl:template match="/project/file">
     <h1><xsl:value-of select="@path" /></h1>
     <div class="file_menu">
-      <xsl:if test="count(include) > 0"><a href="#includes">Includes</a> |</xsl:if>
-      <xsl:if test="count(function) > 0"><a href="#functions">Functions</a> |</xsl:if>
-      <xsl:if test="count(constant) > 0"><a href="#constants">Constants</a> |</xsl:if>
-      <xsl:if test="count(class) > 0"><a href="#classes">Classes</a> |</xsl:if>
+      <xsl:if test="count(include) > 0"><a href="#includes">Includes</a> </xsl:if>
+      <xsl:if test="count(function) > 0"><a href="#functions">Functions</a> </xsl:if>
+      <xsl:if test="count(constant) > 0"><a href="#constants">Constants</a> </xsl:if>
+      <xsl:if test="count(class) > 0"><a href="#classes">Classes</a> </xsl:if>
       <xsl:if test="count(interface) > 0"><a href="#interfaces">Interfaces</a></xsl:if>
     </div>
 
-    <!--xsl:if test="docblock/tag">
+    <xsl:if test="docblock/tag">
     <div class="properties">
       <h1>Properties</h1>
       <xsl:for-each select="docblock/tag">
@@ -38,11 +38,10 @@
     </xsl:if>
     <xsl:if test="docblock/description != ''">
       <xsl:value-of select="docblock/description" disable-output-escaping="yes" /><br />
-      <br />
     </xsl:if>
     <xsl:if test="docblock/long-description != ''">
       <xsl:value-of select="docblock/long-description" disable-output-escaping="yes"/><br />
-    </xsl:if-->
+    </xsl:if>
 
     <xsl:if test="include">
       <a name="includes"/>
